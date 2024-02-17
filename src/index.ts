@@ -1,17 +1,27 @@
-const arr: Array<string | number> = [344, "Junaid"];
+interface Obj {
+  height: number;
+  weight: number;
+  gender?: boolean; //Optional
+}
 
-const arr2: string[] = ["Sami", "Zohaib", "Junaid"];
+interface newObj extends Obj {
+  Class: string;
+}
 
-const arr3: number[] = [33, 42, 543, 32];
+const MyObj: newObj = {
+  height: 32,
+  weight: 311,
+  gender: true,
+  Class: "Biochemistry",
+};
 
-console.log(arr, arr2, arr3);
+const obj: Obj = {
+  height: 33,
+  weight: 44,
+  gender: false,
+};
 
-arr2.forEach((i) => {
-  console.log(i);
-});
-arr.forEach((e) => {
-  console.log(e.toString());
-});
-arr3.forEach((v) => {
-  console.log(v.toString());
-});
+const obj2: Obj = {
+  height: 321,
+  weight: 21,
+};
