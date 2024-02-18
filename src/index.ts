@@ -41,3 +41,18 @@
 //   height: 321,
 //   weight: 21,
 // };
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+type FuncType = (n: number, m: number, l?: number) => number | string;
+
+const func: FuncType = (n, m, l) => {
+  if (typeof l === "undefined") {
+    return "Value was not Provided";
+  }
+  return n * m * l;
+};
+
+console.log(func(32, 43));

@@ -4,35 +4,10 @@
 //   weight: number;
 //   gender?: boolean; //Optional
 // }
-// type FuncType = (n: number, m: number) => void;
-// interface newObj extends Obj {
-//   Class: string;
-//   func: FuncType;
-// }
-// let funcObj: newObj = {
-//   height: 3,
-//   weight: 33,
-//   Class: "Biochem",
-//   func: (n, m) => {
-//     console.log(n * m);
-//   },
-// };
-// funcObj.func(30, 32);
-// const MyObj: newObj = {
-//   height: 32,
-//   weight: 311,
-//   gender: true,
-//   func: (n, m) => {
-//     console.log(n + m);
-//   },
-//   Class: "Biochemistry",
-// };
-// const obj: Obj = {
-//   height: 33,
-//   weight: 44,
-//   gender: false,
-// };
-// const obj2: Obj = {
-//   height: 321,
-//   weight: 21,
-// };
+const func = (n, m, l) => {
+    if (typeof l === "undefined") {
+        return "Value was not Provided";
+    }
+    return n * m * l;
+};
+console.log(func(32, 43));
