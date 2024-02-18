@@ -4,7 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TS</title>
-    <style></style>
+    <style>
+      body {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      h2 {
+        font-size: 4rem;
+        font-family: sans-serif;
+      }
+      form {
+        gap: 3rem;
+        background: lightblue;
+        display: flex;
+        padding: 3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        flex-direction: column;
+      }
+      input {
+        width: 20rem;
+        padding: 1rem;
+        border: 1px solid gray;
+        outline: none;
+        font-size: 1rem;
+        border-radius: 0.7rem;
+      }
+      button {
+        background: black;
+        color: white;
+        width: 10rem;
+        padding: 1rem;
+        outline: none;
+        border: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgba(0, 0, 0, 0.829);
+      }
+    </style>
   </head>
   <body>
     <form id="myform">
@@ -13,7 +58,7 @@
         name="name"
         id="name"
         autocomplete="off"
-        placeholder="Enter your number here"
+        placeholder="Enter the number you want to double"
       />
       <button type="submit">Submit</button>
       <button type="reset">Reset</button>
