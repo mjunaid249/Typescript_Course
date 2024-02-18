@@ -97,18 +97,96 @@
 
 //Partial
 
-// type User = {
+// type User2 = Required<User>;
+
+//---------------------------------------------------
+//--------------------Generics-----------------------
+//---------------------------------------------------
+
+// const func = <T>(n: T): T => {
+//   console.log(typeof n);
+//   return n;
+// };
+
+// func(3);
+
+// type Person = {
+//   name: string;
+//   age: number;
+// };
+
+// const person1: Person = {
+//   name: "Junaid",
+//   age: 33,
+// };
+
+// const func = <T>(n: T): T => {
+//   return n;
+// };
+
+// const ans = func<Person>(person1);
+
+// interface Person {
 //   name: string;
 //   email: string;
+// }
+// interface Person2 {
+//   name: string;
+//   email: string;
+//   password: string;
+// }
+
+// const user: Person = {
+//   name: "Junaid",
+//   email: "junaidch249249@gmail.com",
 // };
 
-// type User2 = Partial<User>;
-
-//Required
-
-// type User = {
-//   name?: string;
-//   email?: string;
+// const user2: Person2 = {
+//   name: "Zohaib",
+//   email: "adad",
+//   password: "33",
 // };
 
-// type User2 = Required<User>;
+// const func = <T, U>(n: T, o: U): { n: T; o: U } => {
+//   return { n, o };
+// };
+
+// const ans = func<Person, Person>(user, user2);
+
+type Person = {
+  name: string;
+  age: number;
+};
+
+const users: Person[] = [
+  {
+    name: "Junaid",
+    age: 20,
+  },
+  {
+    name: "Zohaib",
+    age: 10,
+  },
+  {
+    name: "Zain",
+    age: 13,
+  },
+  {
+    name: "Random",
+    age: 33,
+  },
+];
+
+const filterByPeoples = <T, U extends keyof T>(
+  arr: T[],
+  property: U,
+  value: T[U]
+): T[] => {
+  return arr.filter((i) => {
+    i[property] === value;
+  });
+};
+
+const filteredPeople = filterByPeoples(users, "name", "Junaid");
+
+console.log(filteredPeople);

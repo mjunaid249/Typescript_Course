@@ -7,19 +7,28 @@
 //   photo: string;
 //   readonly id: string;
 // }
-let key = "name";
-const obj = {
-    name: "Junaid",
-    email: "junaidch249249@gmail.com",
+const users = [
+    {
+        name: "Junaid",
+        age: 20,
+    },
+    {
+        name: "Zohaib",
+        age: 10,
+    },
+    {
+        name: "Zain",
+        age: 13,
+    },
+    {
+        name: "Random",
+        age: 33,
+    },
+];
+const filterByPeoples = (arr, property, value) => {
+    return arr.filter((i) => {
+        i[property] === value;
+    });
 };
-obj[key];
-// const getName = (): string => {
-//   return obj.name;
-// };
-// const getEmail = (): string => {
-//   return obj.email;
-// };
-// const getdata = (key: keyof Person) => {
-//   return obj[key];
-// };
-// getdata("name");
+const filteredPeople = filterByPeoples(users, "name", "Junaid");
+console.log(filteredPeople);
