@@ -34,3 +34,10 @@
 // });
 // const img = document.getElementById("img") as HTMLImageElement;
 // img.src;
+const form = document.getElementById("myform");
+const myinp = document.querySelector("form input");
+form.onsubmit = (e) => {
+    e.preventDefault();
+    console.log(myinp.value);
+    console.log(typeof myinp.value);
+};

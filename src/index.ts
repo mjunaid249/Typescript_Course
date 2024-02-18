@@ -43,3 +43,13 @@
 // const img = document.getElementById("img") as HTMLImageElement;
 
 // img.src;
+
+const form = document.getElementById("myform") as HTMLFormElement;
+
+const myinp = document.querySelector("form input") as HTMLInputElement;
+
+form.onsubmit = (e: SubmitEvent) => {
+  e.preventDefault();
+  console.log(myinp.value);
+  console.log(typeof myinp.value);
+};
