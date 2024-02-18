@@ -22,3 +22,24 @@
 // };
 
 // getdata(ProductOne);
+
+// const errorHandler = (): never => {
+//   throw new Error();
+// };
+
+//------------------------------------------------------------------------
+//------------------------------------------------------------------------
+//------------------------------------------------------------------------
+
+//.......Type Assertion..............
+// const btn = document.getElementById("btn") as HTMLElement;
+// const btn = document.getElementById("btn")!;
+// const btn = <HTMLElement>document.getElementById("btn");
+
+// btn.addEventListener("click", () => {
+//   alert("Clicked!");
+// });
+
+// const img = document.getElementById("img") as HTMLImageElement;
+
+// img.src;
