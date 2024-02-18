@@ -62,20 +62,20 @@
 //   body.append(h2);
 // };
 
-interface Person {
-  //   [key: string]: string;
-  name: string;
-  email: string;
-}
+// interface Person {
+//   [key: string]: string;
+//   name: string;
+//   email: string;
+// }
 
-let key = "name";
+// let key = "name";
 
-const obj: Person = {
-  name: "Junaid",
-  email: "junaidch249249@gmail.com",
-};
+// const obj: Person = {
+//   name: "Junaid",
+//   email: "junaidch249249@gmail.com",
+// };
 
-obj[key as keyof Person];
+// obj[key as keyof Person];
 
 // const getName = (): string => {
 //   return obj.name;
@@ -90,3 +90,25 @@ obj[key as keyof Person];
 // };
 
 // getdata("name");
+
+//.............................................................
+//---------------Utility Types--------------
+//.............................................................
+
+//Partial
+
+// type User = {
+//   name: string;
+//   email: string;
+// };
+
+// type User2 = Partial<User>;
+
+//Required
+
+// type User = {
+//   name?: string;
+//   email?: string;
+// };
+
+// type User2 = Required<User>;
