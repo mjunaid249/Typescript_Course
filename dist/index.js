@@ -1,13 +1,21 @@
 "use strict";
-// interface Obj {
-//   height: number;
-//   weight: number;
-//   gender?: boolean; //Optional
+//
+// interface Product {
+//   name: string;
+//   stock: number;
+//   price: number;
+//   photo: string;
+//   readonly id: string;
 // }
-const func = (n, m, l) => {
-    if (typeof l === "undefined") {
-        return "Value was not Provided";
-    }
-    return n * m * l;
-};
-console.log(func(32, 43));
+// type getDataType = (product: Product) => void;
+// const getdata: getDataType = (product) => {
+//   console.log(product);
+// };
+// const ProductOne: Product = {
+//   name: "MacBook",
+//   stock: 78,
+//   price: 4400202,
+//   photo: "samplephotourl",
+//   id: "11",
+// };
+// getdata(ProductOne);

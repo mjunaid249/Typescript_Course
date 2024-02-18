@@ -1,58 +1,24 @@
-// interface Obj {
-//   height: number;
-//   weight: number;
-//   gender?: boolean; //Optional
+//
+// interface Product {
+//   name: string;
+//   stock: number;
+//   price: number;
+//   photo: string;
+//   readonly id: string;
 // }
 
-// type FuncType = (n: number, m: number) => void;
-// interface newObj extends Obj {
-//   Class: string;
-//   func: FuncType;
-// }
+// type getDataType = (product: Product) => void;
 
-// let funcObj: newObj = {
-//   height: 3,
-//   weight: 33,
-//   Class: "Biochem",
-//   func: (n, m) => {
-//     console.log(n * m);
-//   },
+// const getdata: getDataType = (product) => {
+//   console.log(product);
 // };
 
-// funcObj.func(30, 32);
-
-// const MyObj: newObj = {
-//   height: 32,
-//   weight: 311,
-//   gender: true,
-//   func: (n, m) => {
-//     console.log(n + m);
-//   },
-//   Class: "Biochemistry",
+// const ProductOne: Product = {
+//   name: "MacBook",
+//   stock: 78,
+//   price: 4400202,
+//   photo: "samplephotourl",
+//   id: "11",
 // };
 
-// const obj: Obj = {
-//   height: 33,
-//   weight: 44,
-//   gender: false,
-// };
-
-// const obj2: Obj = {
-//   height: 321,
-//   weight: 21,
-// };
-
-//--------------------------------------------------------------------
-//--------------------------------------------------------------------
-//--------------------------------------------------------------------
-
-type FuncType = (n: number, m: number, l?: number) => number | string;
-
-const func: FuncType = (n, m, l) => {
-  if (typeof l === "undefined") {
-    return "Value was not Provided";
-  }
-  return n * m * l;
-};
-
-console.log(func(32, 43));
+// getdata(ProductOne);
